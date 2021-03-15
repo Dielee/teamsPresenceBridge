@@ -36,7 +36,7 @@ Now, you should see an `Authentication successful, token stored!`. If not, try a
 
 #### b. Docker install
 
-2.1 Pull container `docker pull dielee/teamspresencebridge`
+2.1 Pull container `docker pull dielee/teamspresencebridge:latest`
 
 2.2 Start container `docker run -d -p 5557:5557 -e azureApplicationId="applicationId" -e azureClientKey="<clientKey>" -e azureTenantId="<tenantId>" teamspresencebridge:latest`
 
