@@ -1,0 +1,1 @@
+while true; do curl "http://192.168.50.2:5557/setOnline"; sleep 240; done
