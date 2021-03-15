@@ -26,7 +26,11 @@ Search and tick "offline_acces" and "Presence_read".
 2.3 Run the application from src directory with python on windows or linux with:
 `python3 .\server.py`
 
-2.4 Authenticate your application with graph api. Open your browser an go to `http://ipApplicationRunsAt:5557/getRequestURL`. If everything has been configured correctly, you will now be asked whether the app should be authorized. Select "Yes" and then copy the forwarded URL in the browser. Next, go to `http://ipApplicationRunsAt:5557/getToken?url=yourRequestURL` and paste the copied request URL from /getRequestURL.  Now, you should see an `Authentication successful, token stored!`. If not, try again from step one and check all keys and tokens.
+2.4 Authenticate your application with graph api. Open your browser an go to `http://ipApplicationRunsAt:5557/getRequestURL`. 
+If everything has been configured correctly, you will now be asked whether the app should be authorized. 
+Select "Yes" and then copy the forwarded URL in the browser. 
+Next, go to `http://ipApplicationRunsAt:5557/getToken?url=yourRequestURL` and paste the copied request URL from /getRequestURL.  
+Now, you should see an `Authentication successful, token stored!`. If not, try again from step one and check all keys and tokens.
 
 2.5 If everything worked, you can fetch your presence state with `http://ipApplicationRunsAt:5557/getPresence` 
 
@@ -36,7 +40,11 @@ Search and tick "offline_acces" and "Presence_read".
 
 2.2 Start container `docker run -d -p 5557:5557 -e azureApplicationId="applicationId" -e azureClientKey="<clientKey>" -e azureTenantId="<tenantId>" teamspresencebridge:latest`
 
-2.3 Authenticate your application with graph api. Open your browser an go to `http://ipApplicationRunsAt:5557/getRequestURL`. If everything has been configured correctly, you will now be asked whether the app should be authorized. Select "Yes" and then copy the forwarded URL in the browser. Next, go to `http://ipApplicationRunsAt:5557/getToken?url=yourRequestURL` and paste the copied request URL from /getRequestURL.  Now, you should see an `Authentication successful, token stored!`. If not, try again from step one and check all keys and tokens.
+2.3 Authenticate your application with graph api. Open your browser an go to `http://ipApplicationRunsAt:5557/getRequestURL`. 
+If everything has been configured correctly, you will now be asked whether the app should be authorized. 
+Select "Yes" and then copy the forwarded URL in the browser. 
+Next, go to `http://ipApplicationRunsAt:5557/getToken?url=yourRequestURL` and paste the copied request URL from /getRequestURL.  
+Now, you should see an `Authentication successful, token stored!`. If not, try again from step one and check all keys and tokens.
 
 2.4 If everything worked, you can fetch your presence state with `http://ipApplicationRunsAt:5557/getPresence` 
 
