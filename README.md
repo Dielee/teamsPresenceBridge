@@ -3,18 +3,15 @@ Python tool to fetch MS Teams status from GraphAPI.
 
 ## 1. Setup Azure app
 
-1.1  Login with your company MS account and Register an new app here: [Azure Portal](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade "Azure Portal")
+1.1 Login with your company MS account and Register a new app here: Azure Portal
 
-1.2  Give your app an name, set Supported Account Types to: `Only accounts in this organizational directory` and the redirect URL to: `https://login.microsoftonline.com/common/oauth2/nativeclient`
+1.2 Give your app a name, set Supported Account Types to: `Only accounts in this organizational directory` and the redirect URL to: `https://login.microsoftonline.com/common/oauth2/nativeclient`
 
-1.3  Copy and store the applicationId and the tennantId from the dashboard, you need those later!
+1.3 Copy and store the applicationId and the tennantId from the dashboard, you need those later!
 
-1.4 In the left sidebar, go to Certificates & secrets. Than, create an new secret clientkey.
-Copy and store the clientkey, not the Id!
+1.4 In the left sidebar, go to Certificates & secrets. Then, create a new secret clientkey. Copy and store the clientkey, not the Id!
 
-1.5 In the left sidebar, go to "API-Rights", than "Add-Rights".
-Choose "Microsoft Graph" and "Delegated rights".
-Search and tick "offline_acces" and "Presence_read".
+1.5 In the left sidebar, go to "API-Rights", than "Add-Rights". Choose "Microsoft Graph" and "Delegated rights". Search and tick "offline_acces" and "Presence_read".
 
 ##  2. Setup teamsPresenceBridge
 #### a. Local install
