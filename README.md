@@ -3,7 +3,7 @@ Python tool to fetch MS Teams status from GraphAPI.
 
 ## 1. Setup Azure app
 
-1.1 Login with your company MS account and Register a new app here: Azure Portal
+1.1 Login with your company MS account and Register a new app here: [Azure Portal](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)
 
 1.2 Give your app a name, set Supported Account Types to: `Only accounts in this organizational directory` and the redirect URL to: `https://login.microsoftonline.com/common/oauth2/nativeclient`
 
