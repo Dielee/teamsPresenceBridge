@@ -93,5 +93,5 @@ mode: single
 
 ```
 
-### 4. Setup Teams host state (optional)
+## 4. Setup Teams host state (optional)
 If you want to monitor not only the teams status, but also the status of the pc running teams, you can report every four minutes to the teamspresencebridge that the pc is still online. You can do this using the examples in the setTeamsHostOnline folder.
