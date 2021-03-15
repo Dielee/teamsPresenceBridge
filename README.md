@@ -17,7 +17,7 @@ Choose "Microsoft Graph" and "Delegated rights".
 Search and tick "offline_acces" and "Presence_read".
 
 ##  2. Setup Teams Presence Bridge
-####a. Local install
+#### a. Local install
 
 2.1 Clone repository `git clone https://github.com/Dielee/teamsPresenceBridge.git`
 
@@ -30,7 +30,7 @@ Search and tick "offline_acces" and "Presence_read".
 
 2.5 if everything worked, you can fetch your presence state with `http://ipApplicationRunsAt:5557/getPresence` 
 
-####b. Docker install
+#### b. Docker install
 
 2.1 Pull container `docker pull dielee/teamspresencebridge`
 
