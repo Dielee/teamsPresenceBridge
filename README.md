@@ -16,7 +16,7 @@ Copy and store the clientkey, not the Id!
 Choose "Microsoft Graph" and "Delegated rights".
 Search and tick "offline_acces" and "Presence_read".
 
-##  2. Setup Teams Presence Bridge
+##  2. Setup teamsPresenceBridge
 #### a. Local install
 
 2.1 Clone repository `git clone https://github.com/Dielee/teamsPresenceBridge.git`
@@ -28,7 +28,7 @@ Search and tick "offline_acces" and "Presence_read".
 
 2.4 Authenticate your application with graph api. Open your browser an go to `http://ipApplicationRunsAt:5557/getRequestURL`. If everything has been configured correctly, you will now be asked whether the app should be authorized. Select "Yes" and then copy the forwarded URL in the browser. Next, go to `http://ipApplicationRunsAt:5557/getToken?url=yourRequestURL` and paste the copied request URL from /getRequestURL.  Now, you should see an `Authentication successful, token stored!`. If not, try again from step one and check all keys and tokens.
 
-2.5 if everything worked, you can fetch your presence state with `http://ipApplicationRunsAt:5557/getPresence` 
+2.5 If everything worked, you can fetch your presence state with `http://ipApplicationRunsAt:5557/getPresence` 
 
 #### b. Docker install
 
@@ -38,5 +38,5 @@ Search and tick "offline_acces" and "Presence_read".
 
 2.3 Authenticate your application with graph api. Open your browser an go to `http://ipApplicationRunsAt:5557/getRequestURL`. If everything has been configured correctly, you will now be asked whether the app should be authorized. Select "Yes" and then copy the forwarded URL in the browser. Next, go to `http://ipApplicationRunsAt:5557/getToken?url=yourRequestURL` and paste the copied request URL from /getRequestURL.  Now, you should see an `Authentication successful, token stored!`. If not, try again from step one and check all keys and tokens.
 
-2.4 if everything worked, you can fetch your presence state with `http://ipApplicationRunsAt:5557/getPresence` 
+2.4 If everything worked, you can fetch your presence state with `http://ipApplicationRunsAt:5557/getPresence` 
 
