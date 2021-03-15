@@ -45,3 +45,50 @@ Now, you should see an `Authentication successful, token stored!`. If not, try a
 
 2.4 If everything worked, you can fetch your presence state with `http://dockerIp:5557/getPresence` 
 
+## 3. Setup HomeAssistant
+
+3.1 Setup sensor:
+``` yaml
+  - platform: rest
+    name: TeamsPresence
+    method: GET
+    resource: 'http://192.168.50.2:5557/getPresence'
+    value_template: '{{ value_json["state"] }}'
+    json_attributes_path: 'attributes'
+    json_attributes:
+      - 'teamsHostStatus'
+      - 'lastOnlineReport'
+    scan_interval: 2
+```
+3.2 Setup automation:
+``` yaml
+alias: SetTeamsLight
+description: ''
+trigger:
+  - platform: state
+    entity_id: sensor.teamspresence
+condition:
+  - condition: state
+    entity_id: sensor.teamspresence
+    state: online
+    attribute: teamsHostStatus
+action:
+  - service: light.turn_on
+    entity_id: light.presencelight
+    data_template:
+      rgb_color: |
+        {% if states('sensor.teamspresence') == 'Available' %}
+          [0,255,63]
+        {% elif states('sensor.teamspresence') == 'Busy' or
+          states('sensor.teamspresence') == 'DoNotDisturb' or
+          states('sensor.teamspresence') == 'InACall' or
+          states('sensor.teamspresence') == 'InAMeeting' %}
+          [255,0,0]
+        {% elif states('sensor.teamspresence') == 'BeRightBack' or
+                states('sensor.teamspresence') == 'Away' %}
+          [255,190,0]
+        {% else %} [145, 226, 255] {% endif %}
+      brightness: 1
+mode: single
+
+```
