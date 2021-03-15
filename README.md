@@ -23,7 +23,7 @@ Python tool to fetch MS Teams status from GraphAPI.
 2.3 Run the application from src directory with python on windows or linux with:
 `python3 .\server.py`
 
-2.4 Authenticate your application with graph api. Open your browser an go to `http://ipApplicationRunsAt:5557/getRequestURL`. 
+2.4 Authenticate your application with graph api. Open your browser and go to `http://ipApplicationRunsAt:5557/getRequestURL`. 
 If everything has been configured correctly, you will now be asked whether the app should be authorized. 
 Select "Yes" and then copy the forwarded URL in the browser. 
 Next, go to `http://ipApplicationRunsAt:5557/getToken?url=yourRequestURL` and paste the copied request URL from /getRequestURL.  
@@ -37,7 +37,7 @@ Now, you should see an `Authentication successful, token stored!`. If not, try a
 
 2.2 Start container `docker run -d -p 5557:5557 -e azureApplicationId="applicationId" -e azureClientKey="<clientKey>" -e azureTenantId="<tenantId>" teamspresencebridge:latest`
 
-2.3 Authenticate your application with graph api. Open your browser an go to `http://dockerIp:5557/getRequestURL`. 
+2.3 Authenticate your application with graph api. Open your browser and go to `http://dockerIp:5557/getRequestURL`. 
 If everything has been configured correctly, you will now be asked whether the app should be authorized. 
 Select "Yes" and then copy the forwarded URL in the browser. 
 Next, go to `http://dockerIp:5557/getToken?url=yourRequestURL` and paste the copied request URL from /getRequestURL.  
