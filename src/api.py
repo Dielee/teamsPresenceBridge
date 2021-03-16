@@ -58,7 +58,7 @@ def getPresence():
             if lastOnline:
                 lastOnlineStr = lastOnline.strftime("%c")
 
-            if (teamsHostState or teamsHostState == "undefined"):
+            if (teamsHostState == "online" or teamsHostState == "undefined"):
                 myPresence = authAccount.teams().get_my_presence().activity
                 retJson = {'state': myPresence, 'attributes': {'teamsHostStatus': teamsHostState, 'lastOnlineReport': lastOnlineStr}}
 
