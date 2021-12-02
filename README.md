@@ -82,10 +82,14 @@ action:
         {% elif states('sensor.teamspresence') == 'Busy' or
           states('sensor.teamspresence') == 'DoNotDisturb' or
           states('sensor.teamspresence') == 'InACall' or
-          states('sensor.teamspresence') == 'InAMeeting' %}
+          states('sensor.teamspresence') == 'InAMeeting' or
+          states('sensor.teamspresence') == 'Presenting' or
+          states('sensor.teamspresence') == 'InAConferenceCall'
+        %}
           [255,0,0]
         {% elif states('sensor.teamspresence') == 'BeRightBack' or
-                states('sensor.teamspresence') == 'Away' %}
+                states('sensor.teamspresence') == 'Away' or
+                states('sensor.teamspresence') == 'Inactive' %}
           [255,190,0]
         {% else %} [145, 226, 255] {% endif %}
       brightness: 1
