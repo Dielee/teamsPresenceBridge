@@ -18,18 +18,20 @@ Python tool to fetch MS Teams status from GraphAPI.
 
 2.1 Clone repository `git clone https://github.com/Dielee/teamsPresenceBridge.git`
 
-2.2 Fill src/config.yaml with your azure data from step one.
+2.2 Install requirements with `pip3 install -r requirements.txt`
 
-2.3 Run the application from src directory with python on windows or linux with:
+2.3 Fill src/config.yaml with your azure data from step one.
+
+2.4 Run the application from src directory with python on windows or linux with:
 `python3 .\server.py`
 
-2.4 Authenticate your application with graph api. Open your browser and go to `http://ipApplicationRunsAt:5557/getRequestURL`. 
+2.5 Authenticate your application with graph api. Open your browser and go to `http://ipApplicationRunsAt:5557/getRequestURL`. 
 If everything has been configured correctly, you will now be asked whether the app should be authorized. 
 Select "Yes" and then copy the forwarded URL in the browser. 
 Next, go to `http://ipApplicationRunsAt:5557/getToken?url=yourRequestURL` and paste the copied request URL from /getRequestURL.  
 Now, you should see an `Authentication successful, token stored!`. If not, try again from step one and check all keys and tokens.
 
-2.5 If everything worked, you can fetch your presence state with `http://ipApplicationRunsAt:5557/getPresence` 
+2.6 If everything worked, you can fetch your presence state with `http://ipApplicationRunsAt:5557/getPresence` 
 
 #### b. Docker install
 
