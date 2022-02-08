@@ -1,0 +1,10 @@
+name: "teamsPresenceBridge"
+description: "this can be used as presence-sensor for MS-Teams"
+version: "1.0.0"
+slug: "teamsPresenceBridge"
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
