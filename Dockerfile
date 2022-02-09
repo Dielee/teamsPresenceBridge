@@ -6,6 +6,7 @@ WORKDIR /app
 
 # set env tag
 ENV RUN_IN_DOCKER Yes
+ENV RUN_IN_HASSIO Yes
 
 # copy the dependencies file to the working directory
 COPY requirements.txt .

@@ -1,15 +1,25 @@
 from O365 import Account, FileSystemTokenBackend
 from flask import Flask, redirect, request
 import json, os, datetime
-from util import loadConfFromFile, loadConfFromVar
+from util import loadConfFromJson, loadConfFromYaml, loadConfFromVar
 
-runMode = os.environ.get('RUN_IN_DOCKER', False)
-if runMode:
+runInDocker = os.environ.get('RUN_IN_DOCKER', False)
+runInHassio = os.environ.get('RUN_IN_HASSIO', False)
+
+print("runInHassio:"+runInHassio)
+print("runInDocker:"+runInDocker)
+dataPath="./"
+if runInHassio:
+    print("Running in Hassio mode, load conf from options-file...")
+    cfg = loadConfFromJson("/data/options.json")
+    dataPath="/data/"
+elif runInDocker:
     print("Running in docker mode, load conf from env...")
     cfg = loadConfFromVar()
+    dataPath="/data/"
 else:
     print("Running in other mode, load conf from file...")
-    cfg = loadConfFromFile()
+    cfg = loadConfFromYaml("config.yaml")
 
 credentials = (cfg['azureApplicationId'], cfg['azureClientKey'])
 tenantId = cfg['azureTenantId']
@@ -21,10 +31,17 @@ lastOnline = None
 
 @app.before_first_request
 def first():
-    if os.path.isfile('o365_token.txt'):
+    if os.path.isfile(dataPath+'o365_token.txt'):
         global authAccount
-        token_backend = FileSystemTokenBackend(token_filename='o365_token.txt')
+        token_backend = FileSystemTokenBackend(token_filename='o365_token.txt',token_path=dataPath)
         authAccount = Account(credentials, tenant_id=tenantId, token_backend=token_backend)
+
+@app.route('/dashboard')
+def dashboard():
+    if(authAccount and authAccount.is_authenticated):
+      return "<a href='/getPresence'>/getPresence</a>"
+    else:
+      return "Please goto <a href='/getRequestURL'>/getRequestURL</a> and copy the resulting link to <a href='/getToken?url='>/getToken?url=</a><br>"
 
 @app.route('/getRequestURL')
 def auth_step_one():
@@ -37,9 +54,11 @@ def auth_step_one():
 @app.route('/getToken')
 def auth_step_two_callback():
     global authAccount
-    account = Account(credentials, tenant_id=tenantId)
+    token_backend = FileSystemTokenBackend(token_filename='o365_token.txt',token_path=dataPath)
+    account = Account(credentials, tenant_id=tenantId, token_backend=token_backend)
 
     redirectURL = request.args.get('url')
+
     result = account.con.request_token(redirectURL, redirect_uri=callback)
 
     if result:

@@ -1,8 +1,12 @@
 import os, yaml, json
 
-def loadConfFromFile ():
-    with open("config.yaml", "r") as ymlfile:
+def loadConfFromYaml (fileName):
+    with open(fileName, "r") as ymlfile:
         cfg = yaml.load(ymlfile, Loader=yaml.FullLoader)
+    return cfg
+def loadConfFromJson (fileName):
+    with open(fileName, "r") as jsonFile:
+        cfg = json.load(jsonFile)
     return cfg
 
 def loadConfFromVar():
