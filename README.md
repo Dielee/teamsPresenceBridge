@@ -101,3 +101,9 @@ mode: single
 
 ## 4. Setup Teams host state (optional)
 If you want to monitor not only the teams status, but also the status of the pc running teams, you can report every four minutes to the teamspresencebridge that the pc is still online. You can do this using the examples in the setTeamsHostOnline folder.
+
+## 5. Troubleshooting
+###  AADSTS700025: Client is public so neither 'client_assertion' nor 'client_secret' should be presented.
+if you get an `Authentication error` and in the server logs an `AADSTS700025: Client is public so neither 'client_assertion' nor 'client_secret' should be presented.`
+check in the [Azure Portal](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) -> Authentication 
+the platform shoud be web and the toggle `Allow public client flows` is on `no`
