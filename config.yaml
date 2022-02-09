@@ -1,6 +1,6 @@
 name: "teamsPresenceBridge"
 description: "this can be used as presence-sensor for MS-Teams"
-version: "1.0.11"
+version: "1.0.12"
 url: "https://github.com/Dielee/teamsPresenceBridge"
 slug: "teams-presence-bridge"
 webui: "http://[HOST]:[PORT:5557]/"
