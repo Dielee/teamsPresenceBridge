@@ -104,6 +104,6 @@ If you want to monitor not only the teams status, but also the status of the pc 
 
 ## 5. Troubleshooting
 ###  AADSTS700025: Client is public so neither 'client_assertion' nor 'client_secret' should be presented.
-if you get an `Authentication error` and in the server logs an `AADSTS700025: Client is public so neither 'client_assertion' nor 'client_secret' should be presented.`
-check in the [Azure Portal](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) -> Authentication 
-the platform shoud be web and the toggle `Allow public client flows` is on `no`
+If you get an `Authentication error` and in the server logs an `AADSTS700025: Client is public so neither 'client_assertion' nor 'client_secret' should be presented.`
+check in the [Azure Portal](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) -> Authentication. 
+The platform should be `web` and the toggle `Allow public client flows` on `no`
