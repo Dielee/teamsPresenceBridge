@@ -47,6 +47,9 @@ Now, you should see an `Authentication successful, token stored!`. If not, try a
 
 2.4 If everything worked, you can fetch your presence state with `http://dockerIp:5557/getPresence` 
 
+#### c. HomeAssistant install
+follow the steps at the [HomeAssistant docs](https://developers.home-assistant.io/docs/add-ons/tutorial#step-2-installing-and-testing-your-add-on)
+
 ## 3. Setup HomeAssistant
 
 3.1 Setup sensor:
@@ -54,12 +57,12 @@ Now, you should see an `Authentication successful, token stored!`. If not, try a
   - platform: rest
     name: TeamsPresence
     method: GET
-    resource: 'http://192.168.50.2:5557/getPresence'
+    resource: "http://localhost:5557/getPresence"
     value_template: '{{ value_json["state"] }}'
-    json_attributes_path: 'attributes'
+    json_attributes_path: "attributes"
     json_attributes:
-      - 'teamsHostStatus'
-      - 'lastOnlineReport'
+      - "teamsHostStatus"
+      - "lastOnlineReport"
     scan_interval: 2
 ```
 3.2 Setup automation:
