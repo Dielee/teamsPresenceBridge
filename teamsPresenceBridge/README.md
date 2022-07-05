@@ -8,7 +8,8 @@ More information are at the DOCS.
 
 [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FDielee%2FteamsPresenceBridge)
 
-![Addon Stage][stage-badge]
+![Addon Stage][stage-badge] [![Docker Pulls](https://img.shields.io/docker/pulls/dielee/teamspresencebridge.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/dielee/teamspresencebridge)
+
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]

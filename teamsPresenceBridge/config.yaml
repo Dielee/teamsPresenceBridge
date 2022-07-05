@@ -21,3 +21,4 @@ schema:
   azureClientKey: str
   azureTenantId: str
 panel_icon: "mdi:microsoft-teams"
+image: "dielee/teamspresencebridge:latest"
