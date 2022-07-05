@@ -1,5 +1,6 @@
 # set base image (host OS)
-FROM python:3.8
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 # set the working directory in the container
 WORKDIR /app
