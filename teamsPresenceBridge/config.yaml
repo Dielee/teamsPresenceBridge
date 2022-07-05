@@ -1,6 +1,6 @@
 name: "teamsPresenceBridge"
-description: "this can be used as presence-sensor for MS-Teams"
-version: "1.0.12"
+description: "This can be used as presence-sensor for MS-Teams"
+version: "1.0.13"
 url: "https://github.com/Dielee/teamsPresenceBridge"
 slug: "teams-presence-bridge"
 webui: "http://[HOST]:[PORT:5557]/"
@@ -20,3 +20,4 @@ schema:
   azureApplicationId: str
   azureClientKey: str
   azureTenantId: str
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg/258px-Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.png"
