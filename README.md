@@ -37,7 +37,7 @@ Now, you should see an `Authentication successful, token stored!`. If not, try a
 2.6 If everything worked, you can fetch your presence state with `http://ipApplicationRunsAt:5557/getPresence`
 
 #### b. Home assistant install
-[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FDielee%2FteamsPresenceBridge)
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fyouseeus%2FteamsPresenceBridge)
 
 Use the button above or add the URL of this repository to add it manually.
 Or follow the steps at the [HomeAssistant docs](https://developers.home-assistant.io/docs/add-ons/tutorial#step-2-installing-and-testing-your-add-on)
