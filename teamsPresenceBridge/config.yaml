@@ -20,4 +20,4 @@ schema:
   azureApplicationId: str
   azureClientKey: str
   azureTenantId: str
-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg/258px-Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.png"
+panel_icon: "mdi:microsoft-teams"
